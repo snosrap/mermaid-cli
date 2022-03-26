@@ -23,7 +23,7 @@ const checkConfigFile = file => {
   }
 }
 
-const inputPipedFromStdin = () => fs.fstatSync(0).isFIFO()
+const inputPipedFromStdin = () => fs.fstatSync(0).isFile()
 
 const getInputData = async inputFile => new Promise((resolve, reject) => {
   // if an input file has been specified using '-i', it takes precedence over
